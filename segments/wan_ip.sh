@@ -26,7 +26,7 @@ if [ -z "$wan_ip" ]; then
 	if [ "$?" -eq "0" ]; then
 		echo "${wan_ip}" > $tmp_file
 	elif [ -f "${tmp_file}" ]; then
-		wan_ip=$(cat "$tmp_file")
+		wan_ip=$(cat "$tmp_file" | head -1 | tr -d '\n')
 	fi
 fi
 

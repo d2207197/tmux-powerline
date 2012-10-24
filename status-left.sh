@@ -51,8 +51,8 @@ declare -A vcs_branch
 vcs_branch+=(["script"]="${segments_path}/vcs_branch.sh")
 vcs_branch+=(["foreground"]="colour88")
 vcs_branch+=(["background"]="colour29")
-vcs_branch+=(["separator"]="${separator_right_bold}")
-register_segment "vcs_branch"
+# vcs_branch+=(["separator"]="${separator_right_bold}")
+# register_segment "vcs_branch"
 
 # Print the status line in the order of registration above.
 print_status_line_left

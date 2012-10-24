@@ -19,7 +19,7 @@ else
 
 	for nic in ${all_nics[@]}; do
 		# Parse IP address for the NIC.
-		lan_ip=$(ip addr show ${nic} | grep '\<inet\>' | tr -s ' ' | cut -d ' ' -f3)
+		lan_ip=$(ip addr show ${nic} | grep '\<inet\>' | tr -s ' ' | cut -d ' ' -f3 | head -1 |tr -d '\n' )
 		# Trim the CIDR suffix.
 		lan_ip=${lan_ip%/*}
 
