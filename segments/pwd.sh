@@ -34,6 +34,6 @@ run_segment() {
 		ttcwd=${ttcwd:$pwdoffset:$max_len}
 		ttcwd=${trunc_symbol}/${ttcwd#*/}
 	fi
-	echo "$ttcwd"
+	echo "$ttcwd" "$(pwd)"
 	return 0
 }
